@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .test0 { color: red; }
+            .test1 { color: blue; }
+            .test2 { color: green; }
+            .test3 { color: yellow; }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+
+//            //attribute dùng để đặt hoặc trả về thuộc tính và giá trị của phần tử đã chọn
+////            $(document).ready(function (){
+////                $("button").click(function (){
+////                    $("img").attr("width","300");
+////                })
+////            })
+//            // có thể lấy nhiều thuộc tính và giá trị
+////            $(document).ready(function (){
+////                $("button").click(function (){
+////                    $("img").attr({height:"200", width:"300"});
+////                })
+////            })
+//            // đặt giá trị và thuộc tính vào hàm
+//            $(document).ready(function (){
+//                $("button").click(function (){
+//                    $("img").attr("width",function (n,v){
+//                        return v-90;
+//                    })
+//            })
+//        })
+//            //attribute 1 tham số dùng để lấy giá trị của thuộc tính
+//            $(document).ready(function (){
+//                //ở đây ta lấy giá trị của thẻ img nằm trong thẻ p
+//                var name = $("img").attr("src");
+//                $(".test").html(name);
+//            })
+            //atribute lấy thuộc tính và giá trị của 1 phần tử attr(attribute,value) 
+//            $(document).ready(function () {
+//                $("button").click(function () {
+//                    $("img").attr("width", "300"); // tại đây ta có thể định nghĩa lại giá trị chiều cao của ảnh
+//                });
+//                $("a").attr("href","http://www.hocwebchuan.com"); //tại đây ta có thể lấy đường dẫn của liên kết
+//            });
+
+            // attribute có thể lấy nhiều thuộc tính và giá trị
+            // attr({attr:"value",attri:"value"})
+//            $(document).ready(function () {
+//                $("button").click(function () {
+//                    $("img").attr({height: "200", width: "300"});
+//                });
+//               $("img").attr({
+//                       src:"img/ronaldo.jpg",
+//                       alt: "ronaldo"
+//                        }); 
+//            });
+//          đặt giá trị và thuộc tính vào hàm
+//            $(document).ready(function () {
+//                $("p").attr("class", function (i) { //gán cho p một thuộc tính class test và tạo 1 biến 1 để đếm
+//                    return "test" + i;    // sau mỗi lần class test + i thì i tăng lên 1        
+//                });
+//            });
+            $(document).ready(function () {
+                $("button").click(function () {
+                    var name1 = $(".a").attr("src");
+                    $(".b").attr("src",name1);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <img class="a" src="img/ronaldo.jpg"  alt=""/>'
+        <img class="b" src="img/bb.jpg" alt=""/>
+        <button>click to image</button>
+    </body>
+</html>

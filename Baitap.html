@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- 
+        - js lam chung voi tat cac ngon ngu: java , php, ruby.....
+        - muon su dung js thi phai goi thu vien js vao, co 2 cach:
+          + goi truc tiep tu trang chu cua han
+          + down file ve may va goi vao tuong tu goi css -->
+        <style type="text/css">
+            .blue {
+                background-color: red;
+
+            }
+            .red{
+                color: red;
+            }
+            ul {
+                background-color: blue;
+            } 
+            ul li ul {
+                background-color: green;
+                display: none;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                // $("li").click(function(){
+                //     // dai dien cho the vua click vao
+                //     $(this).addClass("blue")
+                // })
+
+                // click vao li nao thi to mau UL CON cua LI do thoi
+
+                // $("li").click(function(){
+                //     $(this).find("ul").addClass("blue");
+                // })
+                $("li").click(function () {
+                    var check = $(this).find("ul").hasClass(".abc");
+                  if(!check){
+                      $(this).find("ul").hide();
+                      $(this).find("ul").addClass("abc");
+                      
+                  }else {                 
+                      $(this).find("ul").show();
+                      $(this).find("ul").removeClass("abc");
+                      
+                  }
+
+//                    if ($(this).find("ul").is(":hidden")) {
+//                        $(".abc").find("ul").hide();
+//                        $(this).find("ul").show();
+//                    } else {
+//                        //$(".abc").find("ul").hide();
+//                        $(this).find("ul").hide();
+//                    }
+                });
+            })
+        </script>
+    </head>
+    <body>
+
+        <ul>
+            <li class="abc">demo1
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+            <li class="abc">demo4
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+            <li class="abc">demo3
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+            <li class="abc">demo1
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+        </ul>
+
+    </body>
+
+</html>
