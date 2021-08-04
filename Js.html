@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("p").click(function () {
+                    alert("the paragraph was click");
+                });
+            });
+        </script>
+        <!-- change: hiển thị thông báo khi 1 thành phần được thây đổi, chủ yếu ở input -->
+        <script>
+            $(document).ready(function () {
+                $("input").change(function () {
+                    alert("The text has been changed.");
+                });
+            });
+        </script>
+        <!--hover: thây đổi background của văn bản khi click chuột vào đoạn văn bản đó -->
+        <script>
+            $(document).ready(function () {
+                $("p").hover(function () {
+                    $(this).css("background-color", "yellow");
+                }, function () {
+                    $(this).css("background-color", "red");
+                })
+            });
+        </script>
+        <!-- focus: hiển thị meeseger khi click vào input -->
+        <script>
+            $(document).ready(function () {
+                $("input").click(function () {
+                    $("span").css("display", "inline").fadeOut(2000);
+
+                });
+            });
+        </script>
+        <!-- scroll: đếm số lần sử dụng thanh kéo lên 1 phần tử -->
+        <script>
+            $(document).scroll(function () {
+                var x = 0;
+                $("span").text(x += 1);
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+                $("form").submit(function () {
+                    alert("submit");
+                });
+            });
+        </script>
+        <style>
+            span{
+                display: none;
+            }
+        </style>
+
+        <!--
+             submit: gửi thông báo khi submit 
+             toggle: chuyển màu khi click 
+        -->
+    </head>
+    <body>
+        <p> click on this paragraph</p>
+        <input type="text"> 
+        <p>Try the scrollbar in the div</p>
+
+        <div style="border:1px solid black;width:200px;height:100px;overflow:scroll;">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+            <br><br>
+            'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'
+        </div>
+
+        <p>Scrolled <span>0</span> times.</p>
+        <form action="">
+            First name: <input type="text" name="FirstName" value="Mickey"><br>
+            Last name: <input type="text" name="LastName" value="Mouse"><br>
+            <input type="submit" value="Submit">
+        </form> 
+    </body>
+</html>

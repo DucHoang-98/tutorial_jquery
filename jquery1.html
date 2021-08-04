@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--    - goi thu vien js vao
+            + goi truc tiep tu trang chu
+            + down file ve-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style>
+            .abc {
+                background: red;
+            }
+            .blue {
+                background: blue;
+            }
+            .green{
+                background: green;
+            }
+            
+        </style>
+        <script>
+            $(document).ready(function () {
+                //  
+                //    viet trong nay thi tu chay, reload
+
+
+                //    $("p").addClass("abc")
+                //
+                //        $("p").removeClass("xxx")
+                //        $("p").hide();
+                //          $("p").show()
+                //           console.log("hien thi thong bao duoi thanh conso")
+                //        alert("hien thi thong bao len man hinh")
+                //           hasClass("xxx"): kiem tra class xxx co ton tai trong the html k?
+                //           - co thi tra ve gia tri true/false
+
+                //            alert($("p").hasClass("x11xx"))
+                //            var check = $("p").hasClass("xxx");
+                //            if(check){
+                //                alert("co")
+                //            } else {
+                //                alert(" k co ")
+                //            }
+
+                //            
+                //            go quen, nho cu phap
+
+                //        var check = $("p").hasClass("content");
+                //        if(check){
+                //            alert("true");
+                //        }else{
+                //            alert("flase");
+                //        }
+
+
+                //        
+
+
+                //    $("button.add").click(function(){
+                //      $("p").addClass("abc")
+                //            $("p").hide()
+                //    })
+                //    
+                //     $("button.remove").click(function(){
+                //     $("p").removeClass("abc")
+                //            $("p").show()
+                //    })
+
+                //      $("button.add").click(function(){
+                //          $("p").addClass("abc")
+                //      })
+                //      
+                //       $("button.remove").click(function(){
+                //           var check = $("p").hasClass("abc");
+                //           
+                //           if(check){
+                //                $("p").removeClass("abc")
+                //                $("p").addClass("blue")
+                //           } else {
+                //               $("p").addClass("abc")
+                //           }
+                //          
+                //          
+                //       })
+
+//                $("button.add").click(function () {
+//                    $("p").addClass("abc");
+//                })
+//               $("button.remove").click(function () {
+//                   var check1 = $("p").hasClass("abc") || $("p").hasClass("green");
+//                  var check2 = $("p").hasClass("green");
+//                if (check1) {
+//                        $("p").removeClass("abc");
+//                        $("p").removeClass("green");
+//                       $("p").addClass("blue");
+//
+//                   } else if (check2) {
+//               
+//                         $("p").addClass("blue");
+//                   } 
+//                   } else {
+//                       $("p").addClass("green");
+//                   }
+//               })
+            $("button.main").click(function (){
+                var check = $("p").hasClass("main");
+                if(!check){     
+                    $("p").hide();
+                    $("p").addClass("main");
+                }else {
+                    $("p").show();
+                    $("p").removeClass("main");
+                }
+            });
+           });
+ $(document).ready(function (){
+                $("button").click(function (){
+                    $("p").hide();
+                })
+            })
+        </script>
+    </head>
+    <body>
+
+        <p >Click on this paragraph.</p>
+        <!--<button class="add">add</button>-->
+        <button class="main">hide/show</button>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- 
+        - js lam chung voi tat cac ngon ngu: java , php, ruby.....
+        - muon su dung js thi phai goi thu vien js vao, co 2 cach:
+          + goi truc tiep tu trang chu cua han
+          + down file ve may va goi vao tuong tu goi css -->
+        <style type="text/css">
+            .blue {
+                background-color: red;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+        <script>
+            $(document).ready(function () {
+                // $("li").click(function(){
+                //     // dai dien cho the vua click vao
+                //     $(this).addClass("blue")
+                // })
+
+                // click vao li nao thi to mau UL CON cua LI do thoi
+
+                //    $("li").click(function(){
+                //        $(this).find("ul").find("li").addClass("blue");
+                //    })
+
+                $("li").click(function () {
+                    $(this).find("ul").find("li").click(function (){
+                        $(this).addClass("blue");
+                    })
+                })
+            });
+        </script>
+    </head>
+    <body>
+
+        <ul>
+            <li>demo1
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+            <li>demo1
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+            <li>demo1
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+            <li>demo1
+                <ul>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                    <li>demo1</li>
+                </ul>
+            </li>
+        </ul>
+
+    </body>
+
+</html>
